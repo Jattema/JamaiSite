@@ -277,3 +277,60 @@ li {
 ul {
     list-style-type: disc;
 }
+.content-container.single-page .content-section {
+    padding: 20px;
+    position: relative;
+}
+.content-container.single-page .content-section, .content-container.wizard-page .content-section {
+    flex: 1 0 0;
+    -webkit-flex: 1;
+}
+div {
+    display: block;
+}
+.fixed-width-container.small-container {
+    width: 700px;
+}
+.grid-container.vertical-direction {
+    flex-direction: column;
+}
+.fixed-width-container {
+    width: 992px;
+    margin: 0 auto;
+    display: flex;
+}
+.text-container {
+    margin: 20px 0 0;
+}
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: .5rem;
+}
+body:root, h1, h2, h3, h4, html:root, input[type=email], input[type=number], input[type=text] {
+    font-family: RoSans,arial;
+}
+label, p {
+    font-family: RoSans,verdana;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+p {
+    margin: 0 0 .8rem;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.result-block {
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 1rem;
+}
+.result-block, .result-block .text-block p, .result-block h4 {
+    margin: 0 0 1rem;
+}
