@@ -69,8 +69,10 @@
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <div class="card" style="width: 18rem;">
-                        <input type="text" id="n1" /><br /><br />
-                        <input type="text" id="n2" /><br /><br />
+                        <p>Amount of Games/Matches/Competitions</p>
+                        <input type="text" id="games">
+                        <p>Amount of Wins</p>
+                        <input type="text" id="wins">
     
                         <select id="operators">
                             <option value="WinRatio">Win %</option>
@@ -78,15 +80,42 @@
                         </select>
     
                         <button class="WorLButton">=</button>
-                        <input type="text" id="result" />
+                        <input type="text" id="result">
                     </div>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 30rem;">
                     <div class="card-body">
-                        <h5 class="card-title">De Console</h5>
-                        <p class="card-text">Hier zie je een beetje wat je krijgt als user, ik "Higher" gegokt en had
-                            gelijk, en dat is door de console dan ook aangegeven</p>
+                        <img class="card-img-top" src="./Afbeeldingen/Calc1.png" alt="Card image cap">
+                        <p> P is a text field, this is a text field too. <br>
+                            The Input tag gives you an input field which is where you can give an answer. <br>
+                            ID is used to be able to acces your answer.
+                        </p>
+                        <img class="card-img-top" src="./Afbeeldingen/Calc2.png" alt="Card image cap">
+                        <p>In the Select tag you can use options. <br>
+                           For now they're just names but when we use their Values they become very useful.
+                        </p>
+                        <img class="card-img-top" src="./Afbeeldingen/Calc3.png" alt="Card image cap">
+                        <p>Button class is used to click on do something after its clicked <br>
+                        The final input field is used for the answer, the ID is used to change the answer.
+                        </p>
+                        <img class="card-img-top" src="./Afbeeldingen/Calc4.png" alt="Card image cap">
+                        <p>Here we pick up the input fields in the first picture. We change them into easy names to use. <br>
+                           We also pick up the 2 Options you saw in the 2nd picture. 
+                        </p>
+                        <img class="card-img-top" src="./Afbeeldingen/Calc5.png" alt="Card image cap">
+                        <p>Here we have 2 'IF' statements, what they do is, u give a requirement and if its met <br>
+                        it'll perform what's inside of the statement. as you can see we have the options in the statements. <br>
+                        If you chose Win % it goes to the first IF statement, and if you chose Loss % u get the second statement. <br>
+                        document.getElementById('result').value will change the input field we saw in the 3rd picture to the answer of the math equation. <br>
+                        If you chose the Win %, your wins gets divided by your matches times 100, this gets you your win %. <br>
+                        for your loss %, it does 100 minus the answer of your win %
+                        </p>
+                        <img class="card-img-top" src="./Afbeeldingen/Calc7.png" alt="Card image cap">
+                        <img class="card-img-top" src="./Afbeeldingen/Calc6.png" alt="Card image cap">
+                        <p>Here we pick up the button you would've clicked now in the 3rd picture. <br>
+                        we add an event listener to the button, which listens to a click on the button, if its clicked it'll perform the last 2 pictures.
+                        </p>
                     </div>
                 </div>
             </div>
