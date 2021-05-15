@@ -334,3 +334,68 @@ p {
 .result-block, .result-block .text-block p, .result-block h4 {
     margin: 0 0 1rem;
 }
+.button.button-link:active, .button.button-link:focus {
+    outline: 2px dotted #01689b;
+    outline-offset: 0;
+}
+.lang-switch li button.button-link {
+    padding: 0 .3rem;
+}
+.button.button-link {
+    background-color: transparent;
+    color: #01689a;
+    font-size: 1.2rem;
+    padding: 0;
+    text-align: left;
+    border-radius: 0;
+}
+.button {
+    outline: none;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    font-size: 1.2rem;
+    background: 0 0;
+    border-radius: 5px;
+    justify-content: center;
+}
+button {
+    font-family: RoSans,arial;
+}
+button {
+    appearance: auto;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.main-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.grid-container.vertical-direction {
+    flex-direction: column;
+}
+.grid-container {
+    display: flex;
+}
