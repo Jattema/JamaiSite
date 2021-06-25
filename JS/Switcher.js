@@ -3,7 +3,7 @@ const localTheme = localStorage.getItem("dark");
 const chk = document.getElementById('chk');
 const navbar = document.querySelector("nav");
 function switcher () {
-	const elements = document.querySelectorAll("body, a")
+	const elements = document.querySelectorAll("body, a, .myCards, head, .topBar, div, .myCard, card")
 	for (i = 0; i < elements.length; i++) {
 		elements[i].classList.toggle("dark")
 	}
