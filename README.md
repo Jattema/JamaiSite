@@ -1,3 +1,3 @@
 # JamaiSite
 
-suk yer mum
+Juhmyy Uhhtemma, Software Developer.
