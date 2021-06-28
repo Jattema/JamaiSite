@@ -21,7 +21,7 @@ const squares = Array.from(document.querySelectorAll('#board div'));
 
 document.getElementById('board').addEventListener('click', handleTurn);
 const messages = document.querySelector('h2');
-document.getElementById('reset-button').addEventListener('click', init);
+document.getElementById('reset-button').addEventListener('click', createBoard);
 
 
 
@@ -34,16 +34,16 @@ function getWinner() {
 };
 
 function handleTurn() {
-    let idx = squares.findIndex(function(square) {
+    let seek = squares.findIndex(function(square) {
         return square === event.target;
     });
-    board[idx] = turn;
+    board[seek] = turn;
     turn = turn === 'X' ? 'O' : 'X';
     win = getWinner();
     render();
 };
 
-function init() {
+function createBoard() {
     board = [
     '', '', '',
     '', '', '',
@@ -60,7 +60,7 @@ function render() {
     messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
     };
 
-init();
+createBoard();
 
 const playerNameInputField = document.querySelector('.input-field-player-name');
 const addPlayerButton = document.querySelector('.add-player-button');
