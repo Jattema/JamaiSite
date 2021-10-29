@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="CSS/Contact.css">
+    <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/Navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -42,6 +42,31 @@
             </ul>
         </div>
     </nav>
+    <?php
+    $response = '';
+if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['msg'])) {
+	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+		$response = 'Email is not valid!';
+	} else if (empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['name']) || empty($_POST['msg'])) {
+		$response = 'Please complete all fields!';
+	} else {
+		$to      = 'hoedisgoed@gmail';
+		$from    = $_POST['email'];
+		$subject = $_POST['subject'];
+		$message = $_POST['msg'];
+		$headers = 'From: ' . $_POST['email'] . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+		mail($to, $subject, $message, $headers);
+		$response = 'Message sent!';		
+	}
+}
+?>
+    <form class="contact" method="post" action="contact.php">
+	<input type="email" name="email" placeholder="Your Email Address" required>
+	<input type="text" name="name" placeholder="Your Name" required>
+	<input type="text" name="subject" placeholder="Subject" required>
+	<textarea name="msg" placeholder="What would you like to contact us about?" required></textarea>
+	<input type="submit">
+</form>
 
     <h3 class="display-4"></h3>
     </div>
